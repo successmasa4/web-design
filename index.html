@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Designs | Landing & Home Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Landing Page Section -->
+  <div class="landing" id="landing">
+    <h1>Welcome to Success Designs</h1>
+    <p>Your Journey to a Better Online Presence Starts Here</p>
+    <a href="#home" class="btn" id="explore-btn">Explore Our Services</a>
+  </div>
+
+  <!-- Home Page Content -->
+  <div class="home-content" id="home-content">
+    <header>
+      <nav>
+        <div class="logo">
+          <!-- Adding the logo image -->
+          <img src="images/logo.jpg" alt="Website Logo">
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="fade-in-text">Welcome to My Awesome Website</h1>
+      <p>Your one-stop solution for awesome services</p>
+      <div class="hero-btns">
+        <a href="#services-section" class="btn animate-btn">Our Services</a>
+        <a href="#about-me" class="btn animate-btn">Learn More</a>
+      </div>
+      <div class="scroll-down-indicator">
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <img src="images/69085.jpg" alt="Masaine - Web Developer" style="width:200px; border-radius:50%;">
+      <p>Hi! I'm Masaine, a passionate web developer specializing in creating stunning websites and effective digital solutions. With expertise in web design, graphic design, and search engine optimization, I help businesses enhance their online presence and connect with their audience.</p>
+      <p>My journey into web development began with a love for creativity and technology. I believe that every project is an opportunity to tell a story and make an impact. When I'm not coding, you can find me exploring new design trends or enjoying the great outdoors.</p>
+      <p>Let's work together to bring your vision to life!</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-section" class="content">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-box">
+          <img src="images/web dsgn.jpg" alt="Web Development" class="fade-in-img">
+          <h3>Web Development</h3>
+          <p>We build responsive and visually appealing websites tailored to your business needs. From simple landing pages to complex e-commerce solutions, we ensure a seamless user experience across all devices.</p>
+        </div>
+        <div class="service-box">
+          <img src="images/graphic.jpg" alt="Graphic Design" class="fade-in-img">
+          <h3>Graphic Design</h3>
+          <p>Our creative graphic design services bring your brand to life with stunning visuals, logo designs, and marketing materials that capture attention and leave a lasting impression on your audience.</p>
+        </div>
+        <div class="service-box">
+          <img src="images/seo.jpg" alt="SEO Optimization" class="fade-in-img">
+          <h3>SEO Optimization</h3>
+          <p>Boost your website’s visibility with our expert SEO services. We optimize your content and website structure to improve search engine rankings, attract more traffic, and generate leads.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials-section" class="content">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials-container">
+        <div class="testimonial-card slide-in-left">
+          <img src="images/img1.jpg" alt="Client Image">
+          <h3>Hosea Natipa</h3>
+          <p>"Fantastic service and amazing results! My website looks incredible thanks to their web development expertise."</p>
+        </div>
+        <div class="testimonial-card slide-in-right">
+          <img src="images/img3.jpg" alt="Client Image">
+          <h3>Hope Nalotuesha</h3>
+          <p>"Their graphic design work elevated my brand. The team is professional and attentive to details."</p>
+        </div>
+        <div class="testimonial-card slide-in-left">
+          <img src="images/img2.jpg" alt="Client Image">
+          <h3>Oloisudori loorpaek</h3>
+          <p>"Excellent SEO services that have significantly improved our website's visibility. Highly recommended!"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="content">
+      <h1>Contact Us</h1>
+      <p>Email: masainesuccess@gmail.com</p>
+      <p>Phone: +254719863882</p>
+    </section>
+
+    <footer>
+      <p>&copy; Masaine Iries | All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for page transition -->
+  <script>
+    document.getElementById('explore-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('landing').classList.add('fade-out');
+      setTimeout(function() {
+        document.getElementById('landing').style.display = 'none';
+        document.getElementById('home-content').classList.add('fade-in');
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+     /* Styles for the landing page */
+     .landing {
+      background: url('images/landing page.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .landing h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .landing p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .landing .btn {
+      padding: 1rem 2rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    .landing .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Initially hide the home page content */
+    .home-content {
+      display: none;
+    }
+
+    /* Transition effect */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 1s ease-out;
+    }
+
+    .fade-in {
+      opacity: 1;
+      display: block;
+      transition: opacity 1s ease-in;
+    }
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Header and Navigation */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+/* Logo Styling */
+.logo img {
+  max-width: 150px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.hero p {
+  margin: 1rem 0;
+}
+
+.hero-btns {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.animate-btn:hover {
+  background: #0056b3;
+  transition: background 0.3s ease;
+}
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px;
+  animation: bounce 2s infinite;
+  color: #fff;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.about-text {
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.about-container img {
+  max-width: 300px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* Services Section */
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  flex: 1 1 30%;
+  margin: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.service-box img {
+  max-width: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.service-box h3 {
+  margin: 1rem 0;
+}
+
+/* Testimonials Section */
+#testimonials-section {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  flex: 1 1 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s ease-in-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1.5s ease-in-out forwards;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .services-container,
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box, .testimonial-card {
+    flex: 1 1 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 100px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
